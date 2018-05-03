@@ -1,0 +1,68 @@
+{'person' => {
+  'name' => 'Bob', 
+  'address' => {
+    '23' => {
+      'city' => 'Paris'
+    }, 
+    '45' => {
+      'city' => 'London'
+    }
+  }
+}}
+
+<%= form_for @person do |person_form| %>
+
+  <%= person_form.text_field :name %>
+
+  <% @person.addresses.each do |address| %>
+    <%= person_form.fields_for address, index: address.id do |address_form|%>
+      <%= address_form.text_field :city %>
+    <% end %>
+  <% end %>
+
+<% end %>
+
+
+[
+  {
+    'id': 341301
+    'name': 'twitter', 
+    'url': 'https://twitter.com'
+  }
+]
+
+
+<%= form_with mode: @setting, local: true do |form| %>
+
+  <% @setting.social.each do |item| %>
+    <%= form.fields_for item, index: item['id'] do |item_form| %>
+      <%= item_form.text_field :name %>
+      <%= item_form.text_field :url %>
+    <% end %>
+  <% end %>
+
+
+<% end %>
+
+
+      <%= @setting['social'][0]['name'] %>
+
+      <% @setting.social.each_with_index do |item, index| %>
+        <div class="input-group">
+          <%= form.fields_for(:social) do |item_form| %>
+            <%= item_form.text_field :name %>
+            <%= item_form.text_field :url %>
+          <% end %>
+        </div>
+      <% end %>
+
+      <% @setting.social.each_with_index do |item, index| %>
+        <div class="input-group">
+          <%= form.fields_for(item) do |item_form| %>
+            <%= item_form.text_field :name %>
+            <%= item_form.text_field :url %>
+          <% end %>
+        </div>
+      <% end %>
+
+

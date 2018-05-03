@@ -1,0 +1,51 @@
+<h1>Settings</h1>
+
+<%= form_with(model: @setting, local: true) do |form| %> 
+  <p>
+    <%= form.label :metaTitle, 'Meta Title' %><br>
+    <%= form.text_field :metaTitle %>
+  </p>
+  <p>
+    <%= form.label :metaAuthor, 'Meta Author' %><br>
+    <%= form.text_field :metaAuthor %>
+  </p>
+ 
+  <p>
+    <%= form.label :metaDescription, 'Meta Description' %><br>
+    <%= form.text_field :metaDescription %>
+  </p>
+
+  <p>
+    <%= form.label :metaKeywords, 'Meta Keywords' %><br>
+    <%= form.text_field :metaKeywords %>
+  </p>
+
+  <br />
+
+  Social Media
+  <br />
+
+  <%= text_field_tag('setting[social][0][name]', nil, id: 'setting_social_0_name') %>
+
+  <br>
+  <% if @setting %>
+    
+
+    <% if @setting.social %>
+      <%= 'cool' %>
+      <br>
+
+      
+      
+    <% else %>
+        <%= 'not cool' %>
+    <% end %>
+
+  <% end %>
+
+
+  <p>
+    <%= form.submit 'Update settings' %>
+  </p>
+ 
+<% end %>
