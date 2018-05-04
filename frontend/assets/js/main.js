@@ -2,6 +2,6 @@ import OnToggle from 'OnToggle';
 
 $(document).ready(function() {
     let myOnToggle = new OnToggle();
-});
 
-console.log('plz work');
+    console.log(myOnToggle);
+});

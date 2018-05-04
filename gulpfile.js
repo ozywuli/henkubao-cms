@@ -39,6 +39,8 @@ if (symlinkedPaths.length) {
     watchedJSPaths = watchedJSPaths.concat(modifiedSymlinkedPaths);
 }
 
+// console.log(watchedJSPaths);
+
 function showError(arg) {
     notifier.notify({
         title: 'Error',
@@ -97,8 +99,6 @@ gulp.task('css', () => {
 
 
 gulp.task('js', () => {
-
-
     return browserify({
             entries: path.join('frontend/assets/js', `main.js`), 
             debug: false
