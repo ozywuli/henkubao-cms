@@ -1,5 +1,7 @@
-import OnToggle from 'OnToggle';
+// import OnToggle from 'OnToggle';
 
-$(document).ready(function() {
-    let myOnToggle = new OnToggle();
-});
+// $(document).ready(function() {
+//     let myOnToggle = new OnToggle();
+// });
+
+console.log('plz work');
