@@ -1,4 +1,4 @@
-import OnToggle from 'OnToggle';
+import OnToggle from 'ontoggle';
 
 $(document).ready(function() {
     let myOnToggle = new OnToggle();
