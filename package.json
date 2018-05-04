@@ -5,7 +5,7 @@
     "postinstall": "gulp build"
   },
   "dependencies": {
-    "ontoggle": "0.0.6",
+    "ontoggle": "0.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^8.4.1",
