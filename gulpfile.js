@@ -159,5 +159,4 @@ gulp.task('watch', ['build'], () => {
     setupWatchers();
 })
 
-
 gulp.task('default', ['watch']);
