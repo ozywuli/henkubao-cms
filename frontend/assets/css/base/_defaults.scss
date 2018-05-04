@@ -1,0 +1,28 @@
+html {
+    font-family: $sans;
+}
+
+html, body {
+    background: $light;
+    color: $text;
+}
+
+.h2 {
+    font-size: 3rem;
+
+    @include breakpoint(smTablet) {
+        font-size: 4.2rem;
+    }
+    @include breakpoint(desktop) {
+        font-size: 7rem;
+    }
+}
+
+a {
+    color: $link;
+    transition: all $speed-transition-1 ease;
+
+    &:hover {
+        color: $link-hover;
+    }
+}

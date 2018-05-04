@@ -1,0 +1,62 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+}
+
+a {
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+}
+
+
+img {
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+strong, b {
+    font-weight: 700;
+}
+
+input, select, button, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+svg {
+    pointer-events: none;
+}
+
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+
+

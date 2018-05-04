@@ -1,0 +1,25 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &.mod-vertical {
+
+    }
+    &.mod-horizontal {
+
+    }
+}
+
+/*------------------------------------*\
+  VISIBILITY STATE
+\*------------------------------------*/
+.is-hidden {
+    @include is-hidden();
+}
+
+.is-visible {
+    @include is-visible();
+}

@@ -1,0 +1,35 @@
+.site-navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: $zi-sitenav;
+
+    position: relative;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+    background: $light;
+}
+
+.site-navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-navbar__title {
+    padding: 0 18px;
+}
+
+.site-navbar__title-anchor {
+    display: block;
+}
+
+.site-navbar__title-img {
+    width: auto;
+    height: 26px;
+
+    @include breakpoint(tablet) {
+        height: 34px;
+    }
+}

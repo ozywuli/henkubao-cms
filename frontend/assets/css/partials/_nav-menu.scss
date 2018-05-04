@@ -1,0 +1,7 @@
+.nav-menu {
+    @extend .is-hidden;
+
+    &.is-visible {
+        @extend .is-visible;
+    }
+}

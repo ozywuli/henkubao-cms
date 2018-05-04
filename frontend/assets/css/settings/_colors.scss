@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  THEME
+\*------------------------------------*/
+$primary-color: #328791;
+
+
+/*------------------------------------*\
+  BASE
+\*------------------------------------*/
+$light: #FFF;
+$dark: #000;
+
+
+/*------------------------------------*\
+  COPY
+\*------------------------------------*/
+$text: #444;
+$granite: #282828;
+/*$link: #00ACEE;*/
+$link: lighten($primary-color, 20%);
+$link-hover: lighten($link, 8%);
+
+
+/*------------------------------------*\
+  SOCIAL COLORS
+\*------------------------------------*/
+$twitter: #00ACEE;
+$facebook: #3B5998;
+$instagram: #9D7144;
+$google: #DD4B39;
+$tumblr: #2C4762;
+
+
+/*------------------------------------*\
+  GRAY
+\*------------------------------------*/
+$light-gray: #F8F8F8;
+$lightest-gray: lighten($light-gray, 10%);
+$lighter-gray: lighten($light-gray, 5%);
+$gray: darken($light-gray, 2.5%);
+$medium-gray: darken($light-gray, 5%);
+$dark-gray: darken($light-gray, 10%);
+$darker-gray: darken($light-gray, 15%);
+$darkest-gray: darken($light-gray, 20%);
+
