@@ -7,8 +7,8 @@ $primary-color: #328791;
 /*------------------------------------*\
   BASE
 \*------------------------------------*/
-$light: #FFF;
-$dark: #000;
+$color-light: #FFF;
+$color-dark: #000;
 
 
 /*------------------------------------*\
@@ -34,12 +34,12 @@ $tumblr: #2C4762;
 /*------------------------------------*\
   GRAY
 \*------------------------------------*/
-$light-gray: #F8F8F8;
-$lightest-gray: lighten($light-gray, 10%);
-$lighter-gray: lighten($light-gray, 5%);
-$gray: darken($light-gray, 2.5%);
-$medium-gray: darken($light-gray, 5%);
-$dark-gray: darken($light-gray, 10%);
-$darker-gray: darken($light-gray, 15%);
-$darkest-gray: darken($light-gray, 20%);
+$color-light-gray: #F8F8F8;
+$color-lightest-gray: lighten($color-light-gray, 10%);
+$color-lighter-gray: lighten($color-light-gray, 5%);
+$gray: darken($color-light-gray, 2.5%);
+$medium-gray: darken($color-light-gray, 5%);
+$color-dark-gray: darken($color-light-gray, 10%);
+$color-darker-gray: darken($color-light-gray, 15%);
+$color-darkest-gray: darken($color-light-gray, 20%);
 

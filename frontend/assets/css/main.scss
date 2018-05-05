@@ -22,10 +22,18 @@
 @import 'base/_base';
 @import 'base/_defaults';
 
+/*------------------------------------*\
+  Globals
+\*------------------------------------*/
+@import 'globals/_global';
 
 /*------------------------------------*\
   Partials
 \*------------------------------------*/
 @import 'partials/_site-navbar';
+@import 'partials/_site-menu';
 @import 'partials/_nav-toggle';
 @import 'partials/_nav-menu';
+@import 'partials/_round-btn';
+@import 'partials/_search-form';
+@import 'partials/_up-arrow';

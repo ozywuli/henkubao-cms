@@ -5,10 +5,10 @@
     left: 0;
     width: 100%;
     z-index: $zi-sitenav;
+    border-top: 3px solid $link;
 
-    position: relative;
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
-    background: $light;
+    background: $color-light;
 }
 
 .site-navbar__container {
@@ -32,4 +32,17 @@
     @include breakpoint(tablet) {
         height: 34px;
     }
+}
+
+.site-navbar__nav {
+    position: relative;
+}
+
+.site-navbar__btns {
+    padding: 8px 0;
+}
+
+.site-navbar__btn {
+    position: relative;
+    margin-right: 12px;
 }

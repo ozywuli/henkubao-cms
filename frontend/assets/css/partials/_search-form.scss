@@ -1,0 +1,76 @@
+.search-form {
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    width: auto;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.1);
+    border-radius: $border-radius;
+    transform: translate3d(0, 20px, 0);
+    transition: all 150ms ease;
+
+    @include is-hidden();
+
+    &.is-visible {
+        @include is-visible();
+        transform: translate3d(0, 0, 0);
+        transition: transform 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 350ms ease;
+    }
+}
+
+    .search-form__form {
+        display: flex;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0;
+        border-radius: $border-radius;
+        border: 5px solid $gray;
+        input {
+            display: inline-block;
+            vertical-align: top;
+            font-family: $sans;
+        }
+    }
+
+    .search-form__btn {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            width: 18px;
+            height: 18px;
+            display: block;
+            pointer-events: none;
+        }
+    }
+
+    input[type="text"].search-form__query {
+        background: $medium-gray;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        border-radius: 0;
+        padding: 5px 0 5px 10px;
+        width: 200px;
+        height: 40px;
+    }
+
+    input[type="submit"].search-form__submit {
+        border: 1px solid $medium-gray;
+        background-color: $color-light;
+        border-radius: 0;
+        width: 50px;
+        height: 40px;
+        text-transform: uppercase;
+        transition: all 150ms ease;
+
+        &:hover {
+            background-color: $color-light-gray;
+            cursor: pointer;
+        }
+    }

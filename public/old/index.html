@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="#" class="wow">Wow</a>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+console.log(window.location.pathname);
+window.addEventListener("popstate", function(e) {
+    console.log(location.pathname);
+});
+$('.wow').on('click', function(event) {
+    event.preventDefault();
+    history.pushState({foo: 'bar'}, 'dimsum', '/guides/dimsum');
+})
+</script>
+
+
+</body>
+</html>

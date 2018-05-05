@@ -1,0 +1,9 @@
+<a 
+  href="#" 
+  class="round-btn <% if defined? classes %><%= classes %><% end %>"
+  <% if defined? data %><%= raw data %><% end %>
+>
+  <div class="round-btn__container">
+    <%= yield %>
+  </div>
+</a>

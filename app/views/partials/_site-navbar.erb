@@ -18,18 +18,50 @@
     
     <!-- Right Block -->
     <div class="site-navbar__block mod-right">
-      <div class="site-navbar__nav">
-        <!-- Toggle -->
-        <%= render layout: '/partials/nav-toggle' do %>
-          <%= svg 'burger' %>
-        <% end %>
-        <!-- Menu -->
-        <%= render '/partials/nav-menu' %>
-      </div>
-    
+      <div class="site-navbar__btns center">
 
-      
+        <!-- Social Toggle -->
+        <div class="site-navbar__btn">
+          <%= render layout: '/partials/round-btn', locals: {
+            classes: 'js-ontoggle-toggler',
+            data: 'data-ontoggle-target="js-nav-social-menu"'
+          } do %>
+            <%= svg 'social' %>
+          <% end %>
+          <%= render layout: '/partials/nav-menu', locals: {
+            classes: 'js-ontoggle-target',
+            data: 'data-ontoggle-target="js-nav-social-menu"'
+          } do %>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus velit facilis, tempora quibusdam minus rerum nobis dolorem aspernatur eligendi quam quod sapiente, eveniet distinctio fugit dolores voluptates molestias eos sed.</p>
+          <% end %>
+        </div>
+
+        <!-- Search Toggle -->
+        <div class="site-navbar__btn">
+          <%= render layout: '/partials/round-btn', locals: {
+            classes: 'js-ontoggle-toggler',
+            data: 'data-ontoggle-target="js-search-form"'
+          } do %>
+            <%= svg 'magnifier' %>
+          <% end %>
+          <%= render 'partials/search-form' %>
+        </div>
+
+        <!-- Nav Menu Toggle -->
+        <div class="site-navbar__btn">
+          <%= render layout: '/partials/round-btn', locals: { 
+            classes: 'js-ontoggle-toggler',
+            data: 'data-ontoggle-target="js-site-menu"'
+          } do %>
+            <%= svg 'burger' %>
+          <% end %>
+        </div>
+
+      </div>
     </div>
 
   </div><!-- / .site-navbar__container -->
 </div>
+
+<!-- Menu -->
+<%= render '/partials/site-menu' %>

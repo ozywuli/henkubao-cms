@@ -1,6 +1,12 @@
 <div 
-    class="nav-menu js-ontoggle-target"
-    data-ontoggle-target="js-nav-menu"
+  class="nav-menu <% if defined? classes %><%= classes %><% end %>"
+  <% if defined? data %><%= raw data %><% end %>
 >
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laudantium, provident iusto, illo facere et expedita, rem reiciendis incidunt sequi neque! Nam eligendi ipsa vitae, iusto culpa voluptatum. Iure, nobis.</p>
+  <!-- arrow -->
+  <%= render partial: '/partials/up-arrow', locals: { mod: 'nav-menu' } %>
+
+  <!-- container -->
+  <div class="nav-menu__container">
+    <%= yield %>
+  </div>
 </div>
