@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_03_013055) do
+ActiveRecord::Schema.define(version: 2018_05_05_192132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,4 +34,14 @@ ActiveRecord::Schema.define(version: 2018_05_03_013055) do
     t.json "social", default: {"0"=>{"name"=>"twitter", "url"=>"https://twitter.com"}}
   end
 
+  create_table "social_addresses", force: :cascade do |t|
+    t.text "name"
+    t.text "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "setting_id"
+    t.index ["setting_id"], name: "index_social_addresses_on_setting_id"
+  end
+
+  add_foreign_key "social_addresses", "settings"
 end

@@ -2,7 +2,9 @@ class SettingsController < ApplicationController
 
   def index
     @setting = Setting.first
+    @setting.socialAddresses.build
   end
+
 
   def create
     @setting = Setting.new(test_params)
@@ -22,11 +24,11 @@ class SettingsController < ApplicationController
 
   private
     def test_params
-      params.permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, :social)
+      params.permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
     end
   
     def setting_params
-      params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, :social)
+      params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
     end
 
 
