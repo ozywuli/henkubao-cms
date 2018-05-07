@@ -1,15 +1,16 @@
 .center {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
 
     &.mod-vertical {
-
+        align-items: center;
     }
     &.mod-horizontal {
-
+        justify-content: center;
+    }
+    &.mod-column {
+        flex-direction: column;
     }
 }
 

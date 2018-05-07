@@ -32,7 +32,10 @@
             classes: 'js-ontoggle-target',
             data: 'data-ontoggle-target="js-nav-social-menu"'
           } do %>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus velit facilis, tempora quibusdam minus rerum nobis dolorem aspernatur eligendi quam quod sapiente, eveniet distinctio fugit dolores voluptates molestias eos sed.</p>
+            <%= render partial: '/partials/social-menu', locals: {
+              showCopy: true,
+              verticalAlign: true
+            } %>
           <% end %>
         </div>
 

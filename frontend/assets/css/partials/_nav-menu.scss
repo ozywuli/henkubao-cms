@@ -10,7 +10,6 @@
     font-weight: bold;
     transform: translate3d(0, 20px, 0);
     box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
 
     @include breakpoint('tablet') {
         top: 60px;

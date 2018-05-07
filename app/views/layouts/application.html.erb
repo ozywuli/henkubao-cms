@@ -50,19 +50,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"> 
+
+    <!-- Styles -->
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
     <!-- Site Navbar -->
-    <%= render 'partials/site-navbar.erb' %>
+    <%= render '/partials/site-navbar.erb' %>
 
     <!-- Container -->
-    <div class="container">
+    <main class="container">
       <div class="content">
         <%= yield %>
       </div>
-    </div>
+    </main>
+
+    <%= render '/partials/site-footer.erb' %>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
