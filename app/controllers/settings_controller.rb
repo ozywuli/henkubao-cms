@@ -1,13 +1,13 @@
 class SettingsController < ApplicationController
 
   def index
-    @setting = Setting.first
+    @setting = Setting.first_or_create(metaTitle: '')  
     @setting.socialAddresses.build
   end
 
 
   def create
-    @setting = Setting.new(test_params)
+    @setting = Setting.new(setting_params)
     if @setting.save
       redirect_back(fallback_location: root_path)
     end
@@ -23,10 +23,6 @@ class SettingsController < ApplicationController
   end
 
   private
-    def test_params
-      params.permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
-    end
-  
     def setting_params
       params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
     end

@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   get 'home/index'
-  get 'settings/index'
+  get '/settings', to: 'settings#index'
 
   get '/signup', to: 'users#new'
    post '/signup',  to: 'users#create'
 
   get '/admin', to: 'admin#index'
-  get '/admin/settings', to: 'settings#index'
+  # get '/admin/settings', to: 'settings#index'
 
   resources :settings
   resources :posts, param: :slug
