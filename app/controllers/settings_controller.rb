@@ -1,13 +1,14 @@
 class SettingsController < ApplicationController
 
   def index
-    @setting = Setting.first_or_create(metaTitle: '')  
+    @setting = Setting.first_or_create(metaTitle: '')
     @setting.socialAddresses.build
   end
 
 
   def create
     @setting = Setting.new(setting_params)
+
     if @setting.save
       redirect_back(fallback_location: root_path)
     end
