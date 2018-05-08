@@ -54,7 +54,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"> 
 
     <!-- Styles -->
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <!-- <%= stylesheet_link_tag    'application', media: 'all' %> -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -71,6 +75,11 @@
         <% end %>
 
         <%= yield %>
+
+        <% if logged_in? %>
+          <%= link_to "Log out", logout_path, method: :delete %>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tempore nisi natus asperiores distinctio alias vero, labore dignissimos laborum enim temporibus minima, quidem a modi maiores, soluta eveniet iusto sequi.</p>
+        <% end %>
         
         <%= debug(params) if Rails.env.development? %>
       </div>
@@ -79,8 +88,8 @@
     <%= render '/partials/site-footer.erb' %>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <%= javascript_include_tag 'application' %>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <%= javascript_include_tag 'application' %> -->
 
   </body>
 </html>
