@@ -9,9 +9,9 @@ class Post < ApplicationRecord
     self.slug = self.slug.to_s.gsub(/\s+/, '-')
   end
 
-  # def to_param
-  #   self.slug.parameterize
-  # end
+  def to_param
+    self.slug.parameterize
+  end
 
 
 
