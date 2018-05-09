@@ -40,6 +40,11 @@ input, select, button, textarea {
     -moz-appearance: none;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+}
+
 hr {
     margin: 20px 0;
 }
