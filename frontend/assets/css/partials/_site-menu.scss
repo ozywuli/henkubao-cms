@@ -7,12 +7,26 @@
     border-left: 1px solid $color-gray;
     padding: 24px;
     width: 300px;
-    padding-top: 72px;
+    padding-top: 87px;
     background: $color-light;
     z-index: $zi-navmenu;
+    transition: all 350ms ease;
 
     &.is-visible {
         transform: translate3d(0, 0, 0);
-        transition: all 350ms ease;
+        
     }
+}
+
+.site-menu__block-title {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.site-menu__list-anchor {
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-weight: bold;
 }

@@ -12,17 +12,9 @@
 
 
     <!-- Page meta data -->
-    <title>
-      <% unless @post %>
-        <% if @setting %>
-          <%= @setting.metaTitle %>
-        <% else %>
-          <%= 'Henkubao' %>
-        <% end %>
-      <% else %>
-        <%= @post.title %>
-      <% end %>
-    </title>
+    <title><%= full_title(yield(:title), yield(:hideExtraTitle)) %></title>
+    <%= yield(:hideExtraTitle) %>
+
     <meta content='' name='author'>
     <meta content='' name='keywords'>
     <meta name='description' content=''>

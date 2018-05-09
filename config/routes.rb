@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
   get 'home/index'
   get '/settings', to: 'settings#index'
 
@@ -16,7 +18,10 @@ Rails.application.routes.draw do
   resources :posts, param: :slug
   resources :users
 
-  root 'home#index'
+  # http://blog.teamtreehouse.com/static-pages-ruby-rails
+  # https://stackoverflow.com/questions/12235718/override-show-resource-route-in-rails
+  get "/*page" => "pages#show"
+
   
   # Ember
   # get "/guides/:name'", to: redirect('/guides/%{name}')

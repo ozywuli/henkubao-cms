@@ -1,0 +1,16 @@
+<% provide(:title, metaTitle) %>
+
+<div class="page">
+    <header class="page-header">
+      <div class="page-header__container">
+        <div class="col">
+          <h2 class="page-header__title"><%= title %></h2>
+        </div>
+      </div>
+    </header>
+    <article class="page-content">
+      <div class="col">
+        <%= yield %>
+      </div>
+    </article>
+</div>

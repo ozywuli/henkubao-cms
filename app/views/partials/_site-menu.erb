@@ -2,5 +2,20 @@
     class="site-menu js-ontoggle-target"
     data-ontoggle-target="js-site-menu"
 >
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore laudantium, provident iusto, illo facere et expedita, rem reiciendis incidunt sequi neque! Nam eligendi ipsa vitae, iusto culpa voluptatum. Iure, nobis.</p>
+  <div class="site-menu__content">
+    <% @menu.each do |key, array| %>
+      <div class="site-menu__block">
+          <h3 class="site-menu__block-title"><%= key %></h3>
+          <ul class="site-menu__list">
+            <% array.each do |item| %>
+              <li class="site-menu__list-item">
+                <a href="<%= item['url'] %>" class="site-menu__list-anchor"><%= item['name'] %></a>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+    <% end %>
+  </div>
+
+
 </div>

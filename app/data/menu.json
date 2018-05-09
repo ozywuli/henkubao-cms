@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "name": "Meta",
+            "url": "/categories/meta/"
+        },
+        {
+            "name": "Maps",
+            "url": "/categories/maps/"
+        },
+        {
+            "name": "Chinese",
+            "url": "/categories/chinese/"
+        }
+    ],
+    "pages": [
+        {
+            "name": "About",
+            "url": "/about"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact"
+        },
+        {
+            "name": "Archive",
+            "url": "/archive"
+        }
+    ],
+    "outbound": [
+        {
+            "name": "Forum",
+            "ur": "https://forum.henkubao.com/"
+        },
+        {
+            "name": "Patreon",
+            "ur": "https://patreon.com/henkubao"
+        }
+    ]
+}
