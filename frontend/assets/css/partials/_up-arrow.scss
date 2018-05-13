@@ -3,19 +3,19 @@
     width: 32px;
     
     &.mod-search-form {
-        top: -14px;
+        top: -16px;
         right: 24px;
     }
 
     &.mod-nav-menu {
-        top: -15px;
+        top: -16px;
         right: 24px;
     }
 
     svg {
         width: 100%;
         path:first-of-type {
-            stroke: $medium-gray !important;
+            stroke: $color-border !important;
         }
     }
 }

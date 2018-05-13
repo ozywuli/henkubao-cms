@@ -67,11 +67,6 @@
         <% end %>
 
         <%= yield %>
-
-        <% if logged_in? %>
-          <%= link_to "Log out", logout_path, method: :delete %>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab tempore nisi natus asperiores distinctio alias vero, labore dignissimos laborum enim temporibus minima, quidem a modi maiores, soluta eveniet iusto sequi.</p>
-        <% end %>
         
         <%= debug(params) if Rails.env.development? %>
       </div>

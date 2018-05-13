@@ -14,11 +14,15 @@ $color-dark: #000;
 /*------------------------------------*\
   COPY
 \*------------------------------------*/
-$text: #444;
+$color-text: #444;
 $granite: #282828;
-/*$link: #00ACEE;*/
-$link: lighten($primary-color, 20%);
-$link-hover: lighten($link, 8%);
+
+$accent: #00ACEE;
+$color-link: lighten($primary-color, 20%);
+$color-link-hover: lighten($color-link, 8%);
+$color-text-gray: #c1c1c1;
+$color-soft-gray: #e5e5e5;
+$color-border: #f1f1f1;
 
 
 /*------------------------------------*\
@@ -31,17 +35,4 @@ $color-google: #DD4B39;
 $color-tumblr: #2C4762;
 
 
-/*------------------------------------*\
-  GRAY
-\*------------------------------------*/
-$color-gray: #e5e5e5;
-
-$color-light-gray: #F8F8F8;
-$color-lightest-gray: lighten($color-light-gray, 10%);
-$color-lighter-gray: lighten($color-light-gray, 5%);
-$gray: darken($color-light-gray, 2.5%);
-$medium-gray: darken($color-light-gray, 5%);
-$color-dark-gray: darken($color-light-gray, 10%);
-$color-darker-gray: darken($color-light-gray, 15%);
-$color-darkest-gray: darken($color-light-gray, 20%);
 

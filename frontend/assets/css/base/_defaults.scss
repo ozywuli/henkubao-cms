@@ -5,7 +5,7 @@ html {
 
 html, body {
     background: $color-light;
-    color: $text;
+    color: $color-text;
 }
 
 body {
@@ -24,11 +24,11 @@ body {
 }
 
 a {
-    color: $link;
+    color: $color-link;
     transition: all $speed-transition-1 ease;
 
     &:hover {
-        color: $link-hover;
+        color: $color-link-hover;
     }
 }
 
@@ -41,4 +41,5 @@ p {
 
 h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
     letter-spacing: -1px;
+    color: $color-dark;
 }

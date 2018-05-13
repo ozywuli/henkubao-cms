@@ -40,18 +40,21 @@
 @import 'partials/_social-menu';
 @import 'partials/_site-footer';
 
+
 /*------------------------------------*\
   Layouts
 \*------------------------------------*/
 @import 'layouts/_page';
+@import 'layouts/_posts';
 @import 'layouts/_miscellaneous';
 
 
 /* miscellaneous */
 .debug_dump {
-    clear: both;
-    float: left;
     width: 100%;
     margin-top: 45px;
+    font-size: 1.5rem;
+    background: #e8e8e8;
+    padding: 20px;
 }
 

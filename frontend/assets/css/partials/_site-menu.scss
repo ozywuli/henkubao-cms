@@ -4,11 +4,12 @@
     right: 0;
     bottom: 0;
     transform: translate3d(100%, 0, 0);
-    border-left: 1px solid $color-gray;
+    border-left: 1px solid $color-soft-gray;
     padding: 24px;
     width: 300px;
     padding-top: 87px;
     background: $color-light;
+    text-align: left;
     z-index: $zi-navmenu;
     transition: all 350ms ease;
 
