@@ -19,7 +19,7 @@ $granite: #282828;
 
 $accent: #00ACEE;
 $color-link: lighten($primary-color, 20%);
-$color-link-hover: lighten($color-link, 8%);
+$color-link-hover: darken($color-link, 8%);
 $color-text-gray: #c1c1c1;
 $color-soft-gray: #e5e5e5;
 $color-border: #f1f1f1;

@@ -29,6 +29,10 @@
         {
             "name": "Archive",
             "url": "/archive"
+        },
+        {
+            "name": "Support",
+            "url": "/support"
         }
     ],
     "outbound": [

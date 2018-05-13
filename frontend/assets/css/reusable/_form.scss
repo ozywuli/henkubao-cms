@@ -1,0 +1,72 @@
+/*------------------------------------*\
+  Form
+\*------------------------------------*/
+.alert {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: red;
+}
+
+
+.form-wrapper {
+    input[type="email"], input[type="password"] {
+        border: 2px solid $color-soft-gray;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        line-height: 2;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+
+        &:focus {
+            border: 2px solid $color-link-hover;
+        }
+    }
+
+    input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+        border: 2px solid $color-soft-gray;
+
+        &:checked {
+            background: $color-link-hover;
+            border: 2px solid $color-link-hover;
+
+            + svg {
+                @include is-visible();
+            }
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox-field {
+        position: relative;
+        margin-right: 10px;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            transform: translateX(-50%) translateY(-50%);
+
+            @include is-hidden();
+
+            path {
+                fill: $color-light !important;
+            }
+        }
+    }
+
+}

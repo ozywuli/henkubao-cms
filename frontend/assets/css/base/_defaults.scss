@@ -43,3 +43,29 @@ h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
     letter-spacing: -1px;
     color: $color-dark;
 }
+
+
+.btn {
+    border-radius: 5px;
+    background: $color-link;
+    color: $color-light;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    outline: none;
+    transition: all 250ms ease;
+
+    &:hover {
+        cursor: pointer;
+        background: $color-link-hover;
+    }
+
+    &:focus {
+
+    }
+}
+
+
+
+
+
