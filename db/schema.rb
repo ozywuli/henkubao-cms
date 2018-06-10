@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_173548) do
+ActiveRecord::Schema.define(version: 2018_06_10_031944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cars", force: :cascade do |t|
+    t.string "ford"
+    t.string "toyota"
+    t.string "honda"
+    t.string "bmw"
+    t.string "volvo"
+    t.bigint "garage_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["garage_id"], name: "index_cars_on_garage_id"
+  end
+
+  create_table "garages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -30,6 +48,21 @@ ActiveRecord::Schema.define(version: 2018_05_09_173548) do
     t.string "metaKeywords"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "socialTwitterUrl"
+    t.string "socialFacebookUrl"
+    t.string "socialTumblrUrl"
+    t.string "socialGoogleplusUrl"
+    t.string "socialInstagramUrl"
+  end
+
+  create_table "socialUrl", force: :cascade do |t|
+    t.string "twitterUrl"
+    t.string "facebookUrl"
+    t.string "tumblrUrl"
+    t.string "googleplusUrl"
+    t.string "instagramUrl"
+    t.bigint "setting_id"
+    t.index ["setting_id"], name: "index_socialUrl_on_setting_id"
   end
 
   create_table "social_addresses", force: :cascade do |t|
@@ -51,5 +84,6 @@ ActiveRecord::Schema.define(version: 2018_05_09_173548) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "socialUrl", "settings"
   add_foreign_key "social_addresses", "settings"
 end

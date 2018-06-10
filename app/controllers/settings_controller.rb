@@ -2,7 +2,12 @@ class SettingsController < ApplicationController
 
   def index
     @setting = Setting.first_or_create(metaTitle: '')
-    @setting.socialAddresses.build
+    # @setting.socialAddresses.build
+    @garage = Garage.find(1)
+    @cars = @garage.cars
+  end
+
+  def show
   end
 
 
@@ -25,7 +30,8 @@ class SettingsController < ApplicationController
 
   private
     def setting_params
-      params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
+      # params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, socialAddresses_attributes: [:id, :name, :url])
+      params.require(:setting).permit(:metaTitle, :metaAuthor, :metaDescription, :metaKeywords, :socialTwitterUrl, :socialFacebookUrl, :socialTumblrUrl, :socialGoogleplusUrl, :socialInstagramUrl)
     end
 
 

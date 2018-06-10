@@ -1,48 +1,69 @@
-<h1>Settings</h1>
 
 
-<%= form_with(model: @setting, local: true) do |form| %> 
-  <p>
-    <%= form.label :metaTitle, 'Meta Title' %><br>
-    <%= form.text_field :metaTitle %>
-  </p>
-  <p>
-    <%= form.label :metaAuthor, 'Meta Author' %><br>
-    <%= form.text_field :metaAuthor %>
-  </p>
- 
-  <p>
-    <%= form.label :metaDescription, 'Meta Description' %><br>
-    <%= form.text_field :metaDescription %>
-  </p>
+<div class="form-wrapper">
+  <h2>Meta Settings</h2>
 
-  <p>
-    <%= form.label :metaKeywords, 'Meta Keywords' %><br>
-    <%= form.text_field :metaKeywords %>
-  </p>
+  <%= form_with(model: @setting, local: true) do |form| %> 
+    <div class="form-row">
+      <%= form.label :metaTitle, 'Meta Title' %>
+      <%= form.text_field :metaTitle %>
+    </div>
 
-  <br /><br>
+    <div class="form-row">
+      <%= form.label :metaAuthor, 'Meta Author' %>
+      <%= form.text_field :metaAuthor %>
+    </div>
+   
+    <div class="form-row">
+      <%= form.label :metaDescription, 'Meta Description' %>
+      <%= form.text_field :metaDescription %>
+    </div>
 
-  Social Media
-  <br />
+    <div class="form-row">
+      <%= form.label :metaKeywords, 'Meta Keywords' %>
+      <%= form.text_field :metaKeywords %>
+    </div>
+
+    <h2>Social Media</h2>
+
+<!--     <ul>
+      <%= form.fields_for :socialAddresses do |socialAddresses_form| %>
+        <li>
+          <%= socialAddresses_form.label :name %>
+          <%= socialAddresses_form.text_field :name %>
+
+          <%= socialAddresses_form.label :url %>
+          <%= socialAddresses_form.text_field :url %>
+        </li>
+      <% end %>
+    </ul> -->
+
+    <div class="form-row">
+      <%= form.label :socialTwitterUrl, 'Twitter URL' %>
+      <%= form.text_field :socialTwitterUrl %>
+    </div>
+
+    <div class="form-row">
+      <%= form.label :socialFacebookUrl, 'Facebook URL' %>
+      <%= form.text_field :socialFacebookUrl %>
+    </div>
   
-  <ul>
-    <%= form.fields_for :socialAddresses do |socialAddresses_form| %>
-      <li>
-        <%= socialAddresses_form.label :name %>
-        <%= socialAddresses_form.text_field :name %>
+    <!-- Update settings button -->
+    <div class="form-row">
+      <%= form.submit 'Update settings' %>
+    </div>
 
-        <%= socialAddresses_form.label :url %>
-        <%= socialAddresses_form.text_field :url %>
-      </li>
-    <% end %>
-  </ul>
+    <%= @garage.name %>
+    <br>
+    <%= debug(@cars) %>
 
+      <% for car in @cars %>
+        <%= car %>
+      <% end %>
+    
+      
 
-  <br><br>
+    
 
-  <p>
-    <%= form.submit 'Update settings' %>
-  </p>
- 
-<% end %>
+  <% end %>  
+</div>

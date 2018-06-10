@@ -9,7 +9,13 @@
 
 
 .form-wrapper {
-    input[type="email"], input[type="password"] {
+    padding: 18px;
+
+    h1, h2, h3 {
+        margin: 15px 0;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
         border: 2px solid $color-soft-gray;
         border-radius: 5px;
         font-size: 1.5rem;
@@ -36,6 +42,14 @@
                 @include is-visible();
             }
         }
+    }
+
+    input[type="submit"] {
+        background: $color-link;
+        color: $color-light;
+        padding: 15px 20px;
+        font-size: 1.6rem;
+        border-radius: 5px;
     }
 
     label {
@@ -68,5 +82,9 @@
             }
         }
     }
+
+}
+
+.form-row {
 
 }

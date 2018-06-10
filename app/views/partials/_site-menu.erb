@@ -9,7 +9,7 @@
           <ul class="site-menu__list">
             <% array.each do |item| %>
               <li class="site-menu__list-item">
-                <a href="<%= item['url'] %>" class="site-menu__list-anchor"><%= item['name'] %></a>
+                <a href="<%= item['url'] %>" class="site-menu__list-anchor" <% if key == 'outbound' %>target="_blank"<% end %> ><%= item['name'] %></a>
               </li>
             <% end %>
           </ul>

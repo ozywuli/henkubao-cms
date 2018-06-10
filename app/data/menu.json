@@ -38,11 +38,11 @@
     "outbound": [
         {
             "name": "Forum",
-            "ur": "https://forum.henkubao.com/"
+            "url": "https://forum.henkubao.com/"
         },
         {
             "name": "Patreon",
-            "ur": "https://patreon.com/henkubao"
+            "url": "https://patreon.com/henkubao"
         }
     ]
 }

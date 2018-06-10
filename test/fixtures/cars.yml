@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ford: MyString
+  toyota: MyString
+  honda: MyString
+  bmw: MyString
+  volvo: MyString
+
+two:
+  ford: MyString
+  toyota: MyString
+  honda: MyString
+  bmw: MyString
+  volvo: MyString

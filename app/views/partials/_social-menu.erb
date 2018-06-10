@@ -1,29 +1,24 @@
 <ul class="social-menu <% if defined? verticalAlign %><% if verticalAlign %>mod-vertical<% end %><% end %>">
-  <% if defined? @setting.socialAddresses %>
-    <% @setting.socialAddresses.each do |item| %>
-      <% if !item.name.nil? %>
-        <li class="social-menu__item">
-          <a 
-            href="<%= item.url %>" 
-            class="social-menu__anchor"
-            target="_blank"
-          >
-            <div class="center mod-vertical">
-              <div class="social-menu__icon mod-<%= item.name %>">
-                <%= svg item.name %>  
+    <!-- Twitter -->
+    <li class="social-menu__item">
+      <a 
+        href="<%= @setting.socialTwitterUrl %>" 
+        class="social-menu__anchor"
+        target="_blank"
+      >
+        <div class="center mod-vertical">
+          <div class="social-menu__icon mod-<%= 'twitter' %>">
+            <%= svg 'twitter' %>  
+          </div>
+          <% if defined? showCopy %>
+            <% if showCopy %>
+              <div class="social-menu__copy">
+                <%= 'twitter' %>
               </div>
-              <% if defined? showCopy %>
-                <% if showCopy %>
-                  <div class="social-menu__copy">
-                    <%= item.name %>
-                  </div>
-                <% end %>
-              <% end %>
-            </div>
-          </a>
-        </li>
-      <% end %>
-    <% end %>
-  <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </a>
+    </li>
 </ul>
 
