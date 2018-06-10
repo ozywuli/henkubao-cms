@@ -55,16 +55,6 @@ ActiveRecord::Schema.define(version: 2018_06_10_031944) do
     t.string "socialInstagramUrl"
   end
 
-  create_table "socialUrl", force: :cascade do |t|
-    t.string "twitterUrl"
-    t.string "facebookUrl"
-    t.string "tumblrUrl"
-    t.string "googleplusUrl"
-    t.string "instagramUrl"
-    t.bigint "setting_id"
-    t.index ["setting_id"], name: "index_socialUrl_on_setting_id"
-  end
-
   create_table "social_addresses", force: :cascade do |t|
     t.text "name"
     t.text "url"
@@ -84,6 +74,5 @@ ActiveRecord::Schema.define(version: 2018_06_10_031944) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "socialUrl", "settings"
   add_foreign_key "social_addresses", "settings"
 end
