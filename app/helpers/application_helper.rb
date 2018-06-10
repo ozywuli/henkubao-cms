@@ -21,8 +21,9 @@ module ApplicationHelper
   end
 
 
-  def selectedObject(array, key, id)
+  def selected_object(array, key, id)
     return array.detect { |obj| obj[key].downcase == id }
   end
 
 end
+

@@ -1,6 +1,6 @@
 class HardcodeSocial < ActiveRecord::Migration[5.2]
   def change
-    create_table :socialUrl do |t|
+    create_table :socialUrls do |t|
       t.string :twitterUrl
       t.string :facebookUrl
       t.string :tumblrUrl

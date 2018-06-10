@@ -3,8 +3,9 @@
   metaTitle: "Support"
 } do %>
 
-<% patreonObj = selectedObject(@menu['outbound'], 'name', 'patreon') %>
+<% patreonObj = selected_object(@menu['outbound'], 'name', 'patreon') %>
 
+<%= patreonObj.instance_of? Hash %>
 
 <p>Enjoy our content? Show your support by sponsoring us at <a href="<%= patreonObj['url'] %>" target="_blank">Patreon</a>!</p>
 
